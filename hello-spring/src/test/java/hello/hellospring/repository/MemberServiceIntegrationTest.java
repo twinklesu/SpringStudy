@@ -44,14 +44,6 @@ class MemberServiceIntegrationTest {
         IllegalStateException e = assertThrows(IllegalStateException.class, () -> memberService.join(member2));
         // 뒤에 람다식을 실행하면, 앞의 에러가 터진다.
         assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
-//        try {
-//            memberService.join(member2);
-//            fail(); // exception으로 넘어가지 않으면 실패
-//        } catch (IllegalStateException e) {
-//            assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
-//        }
-        // then
-
     }
 
     @Test
