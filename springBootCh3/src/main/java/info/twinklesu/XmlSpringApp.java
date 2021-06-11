@@ -1,12 +1,11 @@
-package info;
+package info.twinklesu;
 
 import basic.WorkService;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 public class XmlSpringApp {
     public static void main(String[] args) {
-        GenericXmlApplicationContext context = new GenericXmlApplicationContext("classpath:applicationContext.xml");
-//        classpath 가 바로 resources 폴더로 연결
+        GenericXmlApplicationContext context = new GenericXmlApplicationContext("springBootCh3/src/main/resources/applicationContext.xml");
 
         WorkService yourWorkService = context.getBean("yourWorkService", WorkService.class);
         yourWorkService.askWork();

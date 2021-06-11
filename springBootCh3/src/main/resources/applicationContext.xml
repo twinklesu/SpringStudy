@@ -3,19 +3,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="boss" class="basic.Boss"></bean>
-    <bean id="employee" class="basic.Employee"></bean>
+    <bean id="boss" class="basic.Boss"/>
+    <bean id="employee" class="basic.Employee"/>
 
-    <bean id="myWorkService" class="basic.WorkService">
-        <property name="workManager">
-            <ref bean="boss"/>
-        </property>
+    <bean id="yourWorkService" class="basic.WorkService">
+        <property name="workManager" ref="boss"/>
     </bean>
 
     <bean id="myWorkService" class="basic.WorkService">
-        <property name="workManager">
-            <ref bean="employee"/>
-        </property>
+        <property name="workManager" ref="employee"/>
     </bean>
 
 
