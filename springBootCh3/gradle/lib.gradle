@@ -1,0 +1,16 @@
+ext {
+    springVersion = '5.3.8'
+}
+
+List springLib = [
+        "org.springframework:spring-core:${springVersion}",
+        "org.springframework:spring-context:${springVersion}",
+
+]
+
+dependencies {
+    compileOnly springLib
+    compileOnly 'org.slf4j:slf4j-api:1.7.30'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
