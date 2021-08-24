@@ -5,7 +5,7 @@ Various Java Spring practice repository
 <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=for-the-badge&logo=SpringBoot&logoColor=white">
 
 
-## backend
+## 📁backend
 
 Practice for GDSC Web curriculum - building some REST API<br>
 #### Dependencies<br>
@@ -14,6 +14,6 @@ Practice for GDSC Web curriculum - building some REST API<br>
 - Lombok
 
 
-## Others
+## 📁Others
 
 Followed books for practicing
