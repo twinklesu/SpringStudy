@@ -32,11 +32,11 @@ public class UserRepositoryTest extends BackendApplicationTests {
         assertThat("gdsc@gamil.com").isEqualTo(user.get().getEmail());
     }
 
-    @Test
-    public void read() {
-        // 이미 워크벤치에서 만들어 둔 테이블 있으니까 read 먼저
-        Optional<User> user = userRepository.findById(1);
-        assertThat("Subin").isEqualTo(user.get().getName());
-        assertThat("twinklesu914@gmail.com").isEqualTo(user.get().getEmail());
-    }
+//    @Test
+//    public void read() {
+//        // 이미 워크벤치에서 만들어 둔 테이블 있으니까 read 먼저
+//        Optional<User> user = userRepository.findById(1);
+//        assertThat("Subin").isEqualTo(user.get().getName());
+//        assertThat("twinklesu914@gmail.com").isEqualTo(user.get().getEmail());
+//    }
 }
