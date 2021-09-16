@@ -21,12 +21,12 @@ public class Comment {
     private int id;
 
     @ManyToOne(targetEntity = Board.class)
-    @JoinColumn(name="id", insertable = false, updatable = false)
-    private int boardId;
+    @JoinColumn(name="boardId", insertable = false, updatable = false)
+    private Board board;
 
     @ManyToOne(targetEntity = User.class)
-    @JoinColumn(name="id", insertable = false, updatable = false)
-    private int userId;
+    @JoinColumn(name="userId", insertable = false, updatable = false)
+    private User user;
 
     @Column(nullable = false)
     private String content;

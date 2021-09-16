@@ -21,12 +21,12 @@ public class BoardScrap {
     private int id;
 
     @ManyToOne(targetEntity = User.class)
-    @JoinColumn(name="id", insertable = false, updatable = false)
-    private int userId;
+    @JoinColumn(name="userId", insertable = false, updatable = false)
+    private User user;
 
     @ManyToOne(targetEntity = Board.class)
-    @JoinColumn(name="id", insertable = false, updatable = false)
-    private int boardId;
+    @JoinColumn(name="boardId", insertable = false, updatable = false)
+    private Board board;
 
     @Column(nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Timestamp createdAt;

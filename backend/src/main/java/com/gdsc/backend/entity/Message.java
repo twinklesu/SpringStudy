@@ -21,12 +21,12 @@ public class Message {
     private int id;
 
     @ManyToOne(targetEntity = User.class)
-    @JoinColumn(name="id", insertable = false, updatable = false)
-    private int fromId;
+    @JoinColumn(name="fromUser", insertable = false, updatable = false)
+    private User fromUser;
 
     @ManyToOne(targetEntity = User.class)
-    @JoinColumn(name="id", insertable = false, updatable = false)
-    private int toId;
+    @JoinColumn(name="toUser", insertable = false, updatable = false)
+    private User toUser;
 
     @Column(nullable = false)
     private String content;

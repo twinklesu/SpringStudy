@@ -27,8 +27,8 @@ public class Liked {
     private int refId;
 
     @ManyToOne(targetEntity = User.class)
-    @JoinColumn(name="id", insertable = false, updatable = false)
-    private int userId;
+    @JoinColumn(name="userId", insertable = false, updatable = false)
+    private User user;
 
     @Column(nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Timestamp createdAt;

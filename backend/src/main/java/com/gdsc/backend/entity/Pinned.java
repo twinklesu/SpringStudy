@@ -21,12 +21,12 @@ public class Pinned {
     private int id;
 
     @ManyToOne(targetEntity = BoardCategory.class)
-    @JoinColumn(name="id", insertable = false, updatable = false)
-    private int pinCategory;
+    @JoinColumn(name="pinCategory", insertable = false, updatable = false)
+    private BoardCategory boardCategory;
 
     @ManyToOne(targetEntity = User.class)
-    @JoinColumn(name="id", insertable = false, updatable = false)
-    private int userId;
+    @JoinColumn(name="userId", insertable = false, updatable = false)
+    private User user;
 
     @Column(nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Timestamp createdAt;
