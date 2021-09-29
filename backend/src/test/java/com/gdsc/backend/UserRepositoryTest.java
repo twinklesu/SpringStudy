@@ -27,7 +27,7 @@ public class UserRepositoryTest extends BackendApplicationTests {
         new_user.setEmail("gdsc@gamil.com");
         User saved_user = userRepository.save(new_user);
 
-        Optional<User> user = userRepository.findById(saved_user.getUser_id());
+        Optional<User> user = userRepository.findById(saved_user.getId());
         assertThat("gdsc").isEqualTo(user.get().getName());
         assertThat("gdsc@gamil.com").isEqualTo(user.get().getEmail());
     }
