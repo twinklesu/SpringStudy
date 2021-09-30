@@ -13,7 +13,7 @@ public class UserDto {
     private String hp;
     private String name;
     private String nickname;
-    private boolean isAuth;
+    private Boolean isAuth; // boolean 사용하면 getter 가 틀어져서 ㅜㅜ
     private String profilePic;
 
 }

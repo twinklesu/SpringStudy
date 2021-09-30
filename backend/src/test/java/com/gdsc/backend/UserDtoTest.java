@@ -43,7 +43,7 @@ public class UserDtoTest extends BackendApplicationTests {
             assertThat(userDto.getUserId()).isEqualTo(newUser.getUserId());
             assertThat(userDto.getHp()).isEqualTo(newUser.getHp());
             assertThat(userDto.getNickname()).isEqualTo(newUser.getNickname());
-            assertThat(userDto.isAuth()).isEqualTo(newUser.isAuth());
+            assertThat(userDto.getIsAuth()).isEqualTo(newUser.getIsAuth());
             assertThat(userDto.getProfilePic()).isEqualTo(newUser.getProfilePic());
         }
     }
