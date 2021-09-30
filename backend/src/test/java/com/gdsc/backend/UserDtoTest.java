@@ -11,15 +11,14 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 @Transactional
 @SpringBootTest
 public class UserDtoTest extends BackendApplicationTests {
 
     @Autowired
     private UserRepository userRepository;
-
-//    @Autowired
-//    private ModelMapper modelMapper;
 
     @Test
     public void dtoReadTest() {
@@ -36,9 +35,17 @@ public class UserDtoTest extends BackendApplicationTests {
         Optional<User> user = userRepository.findById(saved_user.getId());
 
         ModelMapper modelMapper = new ModelMapper();
-        UserDto userDto = modelMapper.map(user, UserDto.class);
 
-        System.out.println(userDto);
+        if(user.isPresent()){
+            UserDto userDto = modelMapper.map(user.get(), UserDto.class);
+            assertThat(userDto.getName()).isEqualTo(newUser.getName());
+            assertThat(userDto.getEmail()).isEqualTo(newUser.getEmail());
+            assertThat(userDto.getUserId()).isEqualTo(newUser.getUserId());
+            assertThat(userDto.getHp()).isEqualTo(newUser.getHp());
+            assertThat(userDto.getNickname()).isEqualTo(newUser.getNickname());
+            assertThat(userDto.isAuth()).isEqualTo(newUser.isAuth());
+            assertThat(userDto.getProfilePic()).isEqualTo(newUser.getProfilePic());
+        }
     }
 
 }

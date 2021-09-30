@@ -44,7 +44,7 @@ public class User {
     private String profilePic;
 
     @Column(columnDefinition = "BOOLEAN DEFAULT FALSE")
-    private boolean isAuth;
+    private boolean isAuth; // 필드 이름 is~~ 인 경우 getter setter 가 isAuth, setAuth 로 생성!!!!!
 
     @Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Timestamp createdAt;
